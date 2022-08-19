@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+}
+
+input {
+  border-style: none;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  height: 20px;
+  margin: 15px;
+  padding: 5px;
+}
+form {
+  border: 2px;
+  border-radius: 10px;
+  padding: 15px;
+  border-color: black;
+  border-style: solid;
+  box-sizing: border-box;
+  box-shadow: 10px;
+}
+.signUp {
+  font-style: italic;
+}
+select {
+  background-color: white;
+  border-radius: 4px;
+  padding: 7px;
+  line-height: 1.5em;
+  border: 2px solid black;
+  margin: 10px;
+}

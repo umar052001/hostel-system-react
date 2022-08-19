@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+p {
+  display: grid;
+  grid-template-columns: 500px;
+  grid-column-start: auto;
+}
+span {
+  display: grid;
+  grid-template-columns: 500px;
+  grid-column-end: auto;
+  justify-content: flex-end;
+}
