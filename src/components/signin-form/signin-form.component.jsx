@@ -1,12 +1,32 @@
 import React from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 import "./signin-form.styles.css";
-
-import { useNavigate } from "react-router-dom";
 
 const SignInForm = () => {
   const navigate = useNavigate();
   const handleNavigate = () => navigate("/");
+
+  // const handleChange = (event) => {
+  //   setSignIn({ ...SignIn, [event.target.id]: event.target.value });
+  // };
+  // const handleOwnerSubmit = (e) => {
+  //   e.preventDefault();
+  //   axios
+  //     .post("http://localhost:3001/signinOwner", SignIn)
+  //     .then(function (response) {
+  //       if (response.status === 200) {
+  //         setIsSignedIn(true);
+  //         setIsOwner(true);
+  //       }
+  //     })
+  //     .catch(function (error) {
+  //       console.log(error);
+  //     });
+  // };
+
   return (
     <form className="container">
       <h2 className="signUp">Sign In</h2>
