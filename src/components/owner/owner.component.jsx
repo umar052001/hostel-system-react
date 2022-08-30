@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 import Table from "../table/table.component";
-const Owner = () => {
+const Owner = ({ userEmail }) => {
   return (
     <Fragment>
-      <Table />
+      <Table userEmail={userEmail} />
     </Fragment>
   );
 };

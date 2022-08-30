@@ -5,16 +5,6 @@ const Tenant = () => {
   return (
     <div className="tenant-container">
       <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
     </div>
   );
 };
