@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 import Button from "@mui/material/Button";
+import Modals from "../modal/modal.component";
 
 const Table = ({ userEmail }) => {
   const [tableData, setTableData] = useState([]);
@@ -18,8 +19,6 @@ const Table = ({ userEmail }) => {
       });
   }, [userEmail, tableData]);
 
-  const handleEdit = () => {};
-
   const handleDelete = (id) => {
     axios
       .delete(`http://localhost:3001/deleteHostels/${id}`)
@@ -30,7 +29,6 @@ const Table = ({ userEmail }) => {
         console.log(error);
       });
   };
-  const handleAdd = () => {};
 
   return (
     <div>
@@ -45,9 +43,7 @@ const Table = ({ userEmail }) => {
           <th>Edit</th>
           <th>Remove</th>
 
-          <Button size="small" color="secondary" variant="outlined">
-            Add
-          </Button>
+          <Modals operations="Add" email={userEmail} />
         </tr>
         {tableData.map((data, key) => {
           return (
@@ -59,9 +55,7 @@ const Table = ({ userEmail }) => {
               <td>{data.airconditioner}</td>
               <td>{data.gas}</td>
               <td>
-                <Button variant="contained" color="success" size="small">
-                  Edit
-                </Button>
+                <Modals operations="Edit" id={data.id} />
               </td>
               <td>
                 <Button

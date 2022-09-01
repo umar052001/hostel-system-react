@@ -1,8 +1,13 @@
 import React from "react";
-import "./navbar.styles.css";
+import "./navbar.styles.jsx";
 
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { useNavigate } from "react-router-dom";
+import {
+  NavbarContainer,
+  NavbarHeading,
+  StyledButton,
+} from "./navbar.styles.jsx";
 
 const Navbar = ({
   isOwnerSignedIn,
@@ -20,20 +25,24 @@ const Navbar = ({
   };
   return (
     <div>
-      <nav className="navbar">
+      <NavbarContainer>
         <Logo />
-        <h1>Royal Hostel</h1>
+        <NavbarHeading>Royal Hostel</NavbarHeading>
         <div>
           {isOwnerSignedIn || isTenantSignedIn ? (
-            <button onClick={handleSignOut}>Sign Out</button>
+            <StyledButton onClick={handleSignOut}>Sign Out</StyledButton>
           ) : (
             <>
-              <button onClick={handleNavigationHome}>Sign up</button>
-              <button onClick={handleNavigationSignin}>Sign In</button>
+              <StyledButton onClick={handleNavigationHome}>
+                Sign up
+              </StyledButton>
+              <StyledButton onClick={handleNavigationSignin}>
+                Sign In
+              </StyledButton>
             </>
           )}
         </div>
-      </nav>
+      </NavbarContainer>
     </div>
   );
 };

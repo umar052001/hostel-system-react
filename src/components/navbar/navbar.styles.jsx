@@ -1,4 +1,6 @@
-h1 {
+import styled from "styled-components";
+
+export const NavbarHeading = styled.h1`
   display: flex;
   flex-direction: row;
   color: black;
@@ -7,21 +9,22 @@ h1 {
   flex-wrap: wrap;
   margin: auto;
   font-weight: bold;
-}
-.navbar {
+`;
+export const NavbarContainer = styled.nav`
   display: flex;
   align-items: flex-end;
-  /* background-color: green; */
-}
-button {
+  //background-color: green;
+`;
+export const StyledButton = styled.button`
   background-color: black;
   color: antiquewhite;
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
   cursor: pointer;
-}
-button:hover {
-  transform: scale(0.9);
-  transition-duration: 0.5s;
-}
+
+  :hover {
+    transform: scale(0.9);
+    transition-duration: 0.5s;
+  }
+`;

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import "./signin-form.styles.css";
+import { StyledButton } from "../navbar/navbar.styles";
 
 const SignInForm = ({
   setIsOwnerSignedIn,
@@ -73,7 +74,7 @@ const SignInForm = ({
         </select>
       </div>
       <div>
-        <button type="submit">Sign In</button>
+        <StyledButton type="submit">Sign In</StyledButton>
         Don't have an account?
         <a onClick={handleNavigateHome} style={{ fontSize: "13px" }}>
           Sign Up

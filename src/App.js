@@ -6,7 +6,7 @@ import Navbar from "./components/navbar/navbar.component";
 import SignIn from "./components/sign-in/sign-in.component";
 import Owner from "./components/owner/owner.component";
 import Tenant from "./components/tenant/tenant.component";
-import Error from "./components/Error/error.page";
+
 function App() {
   const [isOwnerSignedIn, setIsOwnerSignedIn] = useState(false);
   const [isTenantSignedIn, setIsTenantSignedIn] = useState(false);
@@ -54,5 +54,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

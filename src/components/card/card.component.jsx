@@ -1,7 +1,10 @@
 import React from "react";
-import "./card.styles.css";
+import "./card.styles.jsx";
 import axios from "axios";
 import { useState } from "react";
+
+import { CardContainer, CardDiv } from "./card.styles.jsx";
+
 const Card = () => {
   const [tenantData, setTenantData] = useState([]);
   axios
@@ -16,21 +19,21 @@ const Card = () => {
     <>
       {tenantData.map((data, key) => {
         return (
-          <div class="card">
+          <CardDiv>
             <img
-              src="https://picsum.photos/200/300"
+              src={`https://picsum.photos/${data.size}00/300`}
               alt="Avatar"
               style={{ width: "100%" }}
             />
-            <div class="card-container">
+            <CardContainer>
               <h4>
                 <b>Price: {data.price}$</b>
               </h4>
-              <p>Email: {data.email}</p>
+              <p>Email: {data.owneremail}</p>
               <p>Size: {data.size}</p>
               <p>Location: {data.location}</p>
-            </div>
-          </div>
+            </CardContainer>
+          </CardDiv>
         );
       })}
     </>
