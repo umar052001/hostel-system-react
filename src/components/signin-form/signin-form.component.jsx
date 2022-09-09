@@ -27,12 +27,9 @@ const SignInForm = ({
         if (response.status === 200) {
           setIsOwnerSignedIn(true);
           handleNavigateOwnerPanel();
-          console.log(doSignIn);
         }
       })
-      .catch(function (error) {
-        console.log(error);
-      });
+      .catch(function (error) {});
   };
   const handleTenantSubmit = (e) => {
     e.preventDefault();
@@ -42,12 +39,9 @@ const SignInForm = ({
         if (response.status === 200) {
           setIsTenantSignedIn(true);
           handleNavigateTenantPanel();
-          console.log(doSignIn);
         }
       })
-      .catch(function (error) {
-        console.log(error);
-      });
+      .catch(function (error) {});
   };
 
   return (
